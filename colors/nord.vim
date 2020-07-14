@@ -279,15 +279,15 @@ call s:hi("TSFunction", s:nord8_gui, "", s:nord8_term, "", "", "")
 call s:hi("TSKeyword", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("TSLabel", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("TSOperator", s:nord9_gui, "", s:nord9_term, "", "NONE", "")
-call s:hi("TSIdentifier", s:nord4_gui, "", "NONE", "", "NONE", "")
+call s:hi("TSIdentifier", s:nord8_gui, "", "NONE", "", "NONE", "")
 call s:hi("TSRepeat", s:nord9_gui, "", s:nord9_term, "", "", "")
 " Constants
 call s:hi("TSConstant", s:nord4_gui, "", "NONE", "", "", "")
 call s:hi("TSConstBuiltin", s:nord4_gui, "", "NONE", "", "", "")
 call s:hi("TSConstMacro", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("TSString", s:nord14_gui, "", s:nord14_term, "", "", "")
-call s:hi("TSStringRegex", s:nord14_gui, "", s:nord14_term, "", "", "")
-call s:hi("TSStringEscape", s:nord14_gui, "", s:nord14_term, "", "", "")
+call s:hi("TSStringRegex", s:nord13_gui, "", s:nord14_term, "", "", "")
+call s:hi("TSStringEscape", s:nord13_gui, "", s:nord14_term, "", "", "")
 call s:hi("TSNumber", s:nord15_gui, "", s:nord15_term, "", "", "")
 call s:hi("TSBoolean", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("TSCharacter", s:nord14_gui, "", s:nord14_term, "", "", "")
@@ -300,7 +300,7 @@ call s:hi("TSTypeBuiltin", s:nord7_gui, "", s:nord7_term, "", "", "")
 call s:hi("TSInclude", s:nord9_gui, "", s:nord9_term, "", "", "")
 hi! link TSPunctBracket TSPunctDelimiter
 hi! link TSPunctSpecial TSPunctDelimiter
-hi! link TSFuncBuiltin TSFunction
+hi! link TSFuncBuiltin TSTypeBuiltin
 hi! link TSFuncMacro   TSFunction
 hi! link TSMethod TSIdentifier
 hi! link TSProperty TSIdentifier
@@ -377,28 +377,8 @@ hi! link diffRemoved DiffDelete
 
 call s:hi("gitconfigVariable", s:nord7_gui, "", s:nord7_term, "", "", "")
 
-call s:hi("goBuiltins", s:nord7_gui, "", s:nord7_term, "", "", "")
-hi! link goConstants TSKeyword
-
 call s:hi("helpBar", s:nord3_gui, "", s:nord3_term, "", "", "")
 call s:hi("helpHyperTextJump", s:nord8_gui, "", s:nord8_term, "", s:underline, "")
-
-call s:hi("htmlArg", s:nord7_gui, "", s:nord7_term, "", "", "")
-call s:hi("htmlLink", s:nord4_gui, "", "", "", "NONE", "NONE")
-hi! link htmlBold Bold
-hi! link htmlEndTag htmlTag
-hi! link htmlItalic Italic
-hi! link htmlH1 markdownH1
-hi! link htmlH2 markdownH1
-hi! link htmlH3 markdownH1
-hi! link htmlH4 markdownH1
-hi! link htmlH5 markdownH1
-hi! link htmlH6 markdownH1
-hi! link htmlSpecialChar TSCharacter
-hi! link htmlTag TSKeyword
-hi! link htmlTagN htmlTag
-
-call s:hi("jsonTSKeyword", s:nord7_gui, "", s:nord7_term, "", "", "")
 
 call s:hi("markdownBlockquote", s:nord7_gui, "", s:nord7_term, "", "", "")
 call s:hi("markdownCode", s:nord7_gui, "", s:nord7_term, "", "", "")
@@ -465,13 +445,6 @@ call s:hi("ALEErrorSign" , s:nord11_gui, "", s:nord11_term, "", "", "")
 call s:hi("ALEWarning" , s:nord13_gui, "", s:nord13_term, "", "undercurl", "")
 call s:hi("ALEError" , s:nord11_gui, "", s:nord11_term, "", "undercurl", "")
 
-" Coc
-" > neoclide/coc
-call s:hi("CocWarningSign", s:nord13_gui, "", s:nord13_term, "", "", "")
-call s:hi("CocErrorSign" , s:nord11_gui, "", s:nord11_term, "", "", "")
-call s:hi("CocInfoSign" , s:nord8_gui, "", s:nord8_term, "", "", "")
-call s:hi("CocHintSign" , s:nord10_gui, "", s:nord10_term, "", "", "")
-
 " Nvim LSP
 " > neovim/nvim-lsp
 call s:hi("LSPDiagnosticsWarning", s:nord13_gui, "", s:nord13_term, "", "", "")
@@ -498,10 +471,6 @@ call s:hi("SignifySignDelete", s:nord11_gui, "", s:nord11_term, "", "", "")
 call s:hi("gitcommitDiscardedFile", s:nord11_gui, "", s:nord11_term, "", "", "")
 call s:hi("gitcommitUntrackedFile", s:nord11_gui, "", s:nord11_term, "", "", "")
 call s:hi("gitcommitSelectedFile", s:nord14_gui, "", s:nord14_term, "", "", "")
-
-" davidhalter/jedi-vim
-call s:hi("jediFunction", s:nord4_gui, s:nord3_gui, "", s:nord3_term, "", "")
-call s:hi("jediFat", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, s:underline.s:bold, "")
 
 " NERDTree
 " > scrooloose/nerdtree
